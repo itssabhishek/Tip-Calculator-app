@@ -1,0 +1,18 @@
+
+
+//Base Color 
+
+$color-primary: hsl(172, 67%, 45%);
+$color-White: hsl(0, 0%, 100%);
+
+//Neutral Colors
+
+$color-secondary: hsl(183, 100%, 15%);
+$dark-grayish-cyan-1: hsl(186, 14%, 43%);
+$dark-grayish-cyan-2: hsl(184, 14%, 56%);
+$light-grayish-cyan-1: hsl(185, 41%, 84%);
+$light-grayish-cyan-2: hsl(189, 41%, 97%);
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+$primary-font: 'Space Mono', monospace;

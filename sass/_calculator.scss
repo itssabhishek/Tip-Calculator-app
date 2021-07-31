@@ -1,0 +1,31 @@
+.calculator {
+  height: 55%;
+  width: 50%;
+  border-radius: 20px;
+  padding: 3rem;
+  background-color: $color-White;
+  display: flex;
+  justify-content: space-around;
+
+
+
+  &_left {
+    height: 100%;
+    width: 45%;
+
+
+
+  }
+
+  &_right {
+    padding: 3rem;
+    height: 100%;
+    width: 45%;
+    background-color: $color-secondary;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+}
