@@ -1,20 +1,17 @@
 .calculator {
-  height: 55%;
+  min-height: 55%;
   width: 50%;
   border-radius: 20px;
   padding: 3rem;
   background-color: $color-White;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 
 
 
   &_left {
     height: 100%;
     width: 45%;
-
-
-
   }
 
   &_right {
@@ -28,4 +25,32 @@
     justify-content: space-between;
 
   }
+}
+
+@media only screen and (max-width: 375px) {
+ .calculator{
+   height: 80%;
+   flex-direction: column;
+   width: 80%;
+   justify-content: space-evenly;
+   padding: 2rem;
+
+
+   &_left {
+     height: 50%;
+     width: 100%;
+
+     margin-bottom: 2rem;
+   }
+
+   &_right {
+     padding: 1rem;
+     height: 45%;
+     width: 100%;
+
+
+   }
+ }
+ 
+
 }
