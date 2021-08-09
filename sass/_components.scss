@@ -17,6 +17,17 @@
         font-weight: bold;
         margin-bottom: 5px;
         color: $color-secondary;
+        display: flex;
+       
+       
+        > p{
+         margin-left: auto;
+         text-align: center;
+         font-size: 12px;
+         margin-top: auto;
+         color: red;
+        }
+
     }
 
     &_icon {

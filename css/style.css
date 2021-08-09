@@ -6,7 +6,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 .container {
   background-color: #c5e4e7;
@@ -15,11 +16,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+}
 
 @media only screen and (max-width: 375px) {
   .container {
-    height: 100%; } }
+    height: 100%;
+  }
+}
 
 .calculator {
   min-height: 55%;
@@ -28,19 +32,22 @@
   padding: 3rem;
   background-color: white;
   display: flex;
-  justify-content: space-between; }
-  .calculator_left {
-    height: 100%;
-    width: 45%; }
-  .calculator_right {
-    padding: 3rem;
-    height: 100%;
-    width: 45%;
-    background-color: #00494d;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
+  justify-content: space-between;
+}
+.calculator_left {
+  height: 100%;
+  width: 45%;
+}
+.calculator_right {
+  padding: 3rem;
+  height: 100%;
+  width: 45%;
+  background-color: #00494d;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 @media only screen and (max-width: 375px) {
   .calculator {
@@ -48,74 +55,99 @@
     flex-direction: column;
     width: 80%;
     justify-content: space-evenly;
-    padding: 2rem; }
-    .calculator_left {
-      height: 50%;
-      width: 100%;
-      margin-bottom: 2rem; }
-    .calculator_right {
-      padding: 1rem;
-      height: 45%;
-      width: 100%; } }
+    padding: 2rem;
+  }
+  .calculator_left {
+    height: 50%;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .calculator_right {
+    padding: 1rem;
+    height: 45%;
+    width: 100%;
+  }
+}
 
 .heading {
   font-size: 2rem;
   font-weight: 300;
-  letter-spacing: .6rem;
-  color: #00494d; }
+  letter-spacing: 0.6rem;
+  color: #00494d;
+}
 
 .forms {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; }
-  .forms_label {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #00494d; }
-  .forms_icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 5px;
-    background-color: #f4fafa;
-    border: 2px solid white;
-    border-radius: 5px; }
-    .forms_icon > svg {
-      width: 15px;
-      z-index: 5; }
-    .forms_icon:focus-within {
-      border: 2px solid #26c0ab; }
-  .forms_tip {
-    width: 100%;
-    display: grid;
-    justify-content: space-between;
-    grid-template-rows: repeat(2, 50%);
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 10px;
-    margin-bottom: 1.5rem; }
-    .forms_tip > input {
-      background-color: #00494d;
-      font-size: 2rem;
-      color: white;
-      border-radius: 5px;
-      border: none; }
-      .forms_tip > input.forms_tip-6 {
-        background-color: white;
-        color: #00494d;
-        text-align: center !important;
-        border: 2px solid white; }
-      .forms_tip > input[type=number]:focus {
-        border: 2px solid #26c0ab; }
-      .forms_tip > input::-webkit-outer-spin-button, .forms_tip > input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0; }
-      .forms_tip > input::placeholder {
-        font-size: 20px;
-        text-align: center; }
+  height: 100%;
+}
+.forms_label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #00494d;
+  display: flex;
+}
+.forms_label > p {
+  margin-left: auto;
+  text-align: center;
+  font-size: 12px;
+  margin-top: auto;
+  color: red;
+}
+.forms_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+  background-color: #f4fafa;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+.forms_icon > svg {
+  width: 15px;
+  z-index: 5;
+}
+.forms_icon:focus-within {
+  border: 2px solid #26c0ab;
+}
+.forms_tip {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.forms_tip > input {
+  background-color: #00494d;
+  font-size: 2rem;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.forms_tip > input.forms_tip-6 {
+  background-color: white;
+  color: #00494d;
+  text-align: center !important;
+  border: 2px solid white;
+}
+.forms_tip > input[type="number"]:focus {
+  border: 2px solid #26c0ab;
+}
+.forms_tip > input::-webkit-outer-spin-button,
+.forms_tip > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.forms_tip > input::placeholder {
+  font-size: 20px;
+  text-align: center;
+}
 
-input[type=number].forms_same {
+input[type="number"].forms_same {
   width: 100%;
   height: 30px;
   background-color: #f4fafa;
@@ -125,36 +157,45 @@ input[type=number].forms_same {
   text-align: end;
   color: #00494d;
   font-weight: 700;
-  padding: 2px 4px; }
+  padding: 2px 4px;
+}
 
-input[type=number]:focus {
-  outline: none; }
+input[type="number"]:focus {
+  outline: none;
+}
 
-input[type=number]::placeholder {
-  color: #7f9c9f; }
+input[type="number"]::placeholder {
+  color: #7f9c9f;
+}
 
 .tip_text-amount {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem; }
-  .tip_text-amount--left {
-    line-height: 10px;
-    font-size: 2rem;
-    color: white; }
-    .tip_text-amount--left > p {
-      font-size: 1rem;
-      color: #7f9c9f; }
-  .tip_text-amount--right {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #26c0ab; }
+  margin-bottom: 4rem;
+}
+.tip_text-amount--left {
+  line-height: 10px;
+  font-size: 2rem;
+  color: white;
+}
+.tip_text-amount--left > p {
+  font-size: 1rem;
+  color: #7f9c9f;
+}
+.tip_text-amount--right {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #26c0ab;
+}
 
-input[type=button] {
-  cursor: pointer; }
-  input[type=button]:focus {
-    background-color: #26c0ab;
-    color: #00494d; }
+input[type="button"] {
+  cursor: pointer;
+}
+input[type="button"]:focus {
+  background-color: #26c0ab;
+  color: #00494d;
+}
 
 .reset_button {
   font-size: 15px;
@@ -166,6 +207,8 @@ input[type=button] {
   text-transform: uppercase;
   background-color: #156a5f;
   color: #00494d;
-  cursor: pointer; }
-  .reset_button:active {
-    background-color: #26c0ab; }
+  cursor: pointer;
+}
+.reset_button:active {
+  background-color: #26c0ab;
+}

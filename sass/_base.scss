@@ -1,27 +1,26 @@
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $primary-font;
-    font-size: 62.5%;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+  font-size: 62.5%;
 }
 
-.container{
+.container {
+  background-color: $light-grayish-cyan-1;
+  height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
 
-    background-color: $light-grayish-cyan-1;
-    height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
-
-    justify-content: space-evenly;
-    align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 @media only screen and (max-width: 375px) {
-   .container{
-       height: 100%;
-   }
+  .container {
+    height: 100vh;
+  }
 }
