@@ -1,5 +1,6 @@
 function reply_click(clicked_id) {
   percentage_value = clicked_id;
+  percentage_value = parseInt(percentage_value);
 }
 
 function calculateBill() {
@@ -16,6 +17,30 @@ function calculateBill() {
     no_of_people = 1;
   }
 
-  var tip_amount = (bill * percentage_value) / 100;
-  document.getElementsByClassName('tip_amount')[0].innerHTML = tip_amount;
+  percentage_value == 1
+    ? (percentage_value = ent_tip_percentage)
+    : percentage_value;
+
+  var div = document.getElementsByClassName('hidden')[0];
+
+  if (bill < 0 || no_of_people < 0) {
+    div.style.color = 'red';
+  } else {
+    div.style.display = 'none';
+  }
+
+  var tip = (bill * percentage_value) / 100;
+
+  var tip_amount = tip / no_of_people;
+  document.getElementsByClassName('tip_amount')[0].innerHTML =
+    tip_amount.toFixed(2);
+
+  var total = (bill + tip) / no_of_people;
+  document.getElementsByClassName('total')[0].innerHTML = total.toFixed(2);
+}
+
+function reset() {
+  document.getElementById('forms').reset();
+  document.getElementsByClassName('tip_amount')[0].innerHTML = '$0.00';
+  document.getElementsByClassName('total')[0].innerHTML = '$0.00';
 }

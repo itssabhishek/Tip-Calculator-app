@@ -1,195 +1,181 @@
 .heading {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: .6rem;
-    color: $color-secondary;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.6rem;
+  color: $color-secondary;
 }
 
 .forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &_label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: $color-secondary;
     display: flex;
-    flex-direction: column;
+
+    > p {
+      margin-left: auto;
+      text-align: center;
+      font-size: 12px;
+      margin-top: auto;
+      color: $color-White;
+    }
+  }
+
+  &_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    background-color: $light-grayish-cyan-2;
+    border: 2px solid $color-White;
+    border-radius: 5px;
+
+    > svg {
+      width: 15px;
+      z-index: 5;
+    }
+
+    &:focus-within {
+      border: 2px solid $color-primary;
+    }
+  }
+
+  &_tip {
+    width: 100%;
+    display: grid;
     justify-content: space-between;
-    height: 100%;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 1.5rem;
 
-   
-    &_label {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 5px;
+    > input {
+      background-color: $color-secondary;
+      font-size: 2rem;
+      color: $color-White;
+      border-radius: 5px;
+      border: none;
+
+      &.forms_tip-6 {
+        background-color: $color-White;
         color: $color-secondary;
-        display: flex;
-       
-       
-        > p{
-         margin-left: auto;
-         text-align: center;
-         font-size: 12px;
-         margin-top: auto;
-         color: red;
-        }
-
-    }
-
-    &_icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 5px;
-        background-color: $light-grayish-cyan-2;
+        text-align: center !important;
         border: 2px solid $color-White;
-        border-radius: 5px;
+      }
 
-        >svg {
-            width: 15px;
-            z-index: 5;
-        }
+      &[type='number']:focus {
+        border: 2px solid $color-primary;
+      }
 
-        &:focus-within {
-          
-            border:2px solid $color-primary;
-        }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
 
-
+      &::placeholder {
+        font-size: 20px;
+        text-align: center;
+      }
     }
-
-    &_tip {
-        width: 100%;
-        display: grid;
-        justify-content: space-between;
-        grid-template-rows: repeat(2, 50%);
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-gap: 10px;
-        margin-bottom: 1.5rem;
-
-
-
-        >input {
-            background-color: $color-secondary;
-            font-size: 2rem;
-            color: $color-White;
-            border-radius: 5px;
-            border: none;
-
-
-            &.forms_tip-6 {
-                background-color: $color-White;
-                color: $color-secondary;
-                text-align: center !important;
-                border: 2px solid $color-White;
-
-               
-            }
-
-            &[type=number]:focus{
-                                border: 2px solid $color-primary;
-
-            }
-        
-
-            &::-webkit-outer-spin-button,
-            &::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-
-            }
-
-            &::placeholder {
-                font-size: 20px;
-                text-align: center;
-            }
-
-
-        }
-
-    }
+  }
 }
 
-input[type=number] {
- 
+input[type='number'] {
+  &.forms_same {
+    width: 100%;
+    height: 30px;
 
-    &.forms_same {
-        width: 100%;
-        height: 30px;
+    background-color: $light-grayish-cyan-2;
+    border: none;
+    border-radius: 2px;
+    font-size: 24px;
+    text-align: end;
+    color: $color-secondary;
+    font-weight: 700;
+    padding: 2px 4px;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-input-placeholder {
+    /* Edge */
+    color: $dark-grayish-cyan-2;
+  }
 
-        background-color: $light-grayish-cyan-2;
-        border: none;
-        border-radius: 2px;
-        font-size: 24px;
-        text-align: end;
-        color: $color-secondary;
-        font-weight: 700;
-        padding: 2px 4px;
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $dark-grayish-cyan-2;
+  }
 
-        
-    }
-    &:focus {
-        outline: none;
-    }
-
-
-
-    &::placeholder {
-        color: $dark-grayish-cyan-2;
-    }
-
-
+  &::placeholder {
+    color: $dark-grayish-cyan-2;
+  }
 }
 
 .tip {
-    &_text-amount {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 4rem;
+  &_text {
+    display: flex;
+    flex-direction: column;
+  }
 
+  &_text-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
 
-        &--left {
-            line-height: 10px;
-            font-size: 2rem;
-            color: $color-White;
+    &--left {
+      line-height: 10px;
+      font-size: 2rem;
+      color: $color-White;
 
-            >p {
-                font-size: 1rem;
-                color: $dark-grayish-cyan-2;
-            }
-        }
+      > h3 {
+        line-height: 2rem;
+      }
 
-        &--right {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: $color-primary;
-        }
-
+      > p {
+        font-size: 1rem;
+        color: $dark-grayish-cyan-2;
+      }
     }
+
+    &--right {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: $color-primary;
+    }
+  }
 }
 
+input[type='button'] {
+  cursor: pointer;
 
-input[type=button] {
-    cursor: pointer;
-
-    &:focus {
-        background-color: $color-primary;
-        color: $color-secondary;
-    }
+  &:focus {
+    background-color: $color-primary;
+    color: $color-secondary;
+  }
 }
 
 .reset_button {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: darken($color-primary, 20%);
+  color: $color-secondary;
+  cursor: pointer;
 
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    background-color: darken($color-primary, 20%);
-    color: $color-secondary;
-    cursor: pointer;
-
-    &:active {
-        background-color: $color-primary;
-
-    }
-
-
+  &:active {
+    background-color: $color-primary;
+  }
 }
